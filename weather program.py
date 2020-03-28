@@ -46,7 +46,7 @@ def printReport(weatherData, city):
 
 def get_weather(query):
     try:
-        response = requests.get("http://api.openweathermap.org/data/2.5/weather?" + query + "&APPID=43e4544b641422894628e7dd582d8759&units=imperial")  #if you want different units, change "imperial" to "metric"
+        response = requests.get("http://api.openweathermap.org/data/2.5/weather?" + query + ",us&APPID=43e4544b641422894628e7dd582d8759&units=imperial")  #if you want different units, change "imperial" to "metric"
         if response.status_code == 200:
             print("Connection successful.")
             res = response.json()
